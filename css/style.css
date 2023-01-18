@@ -4,6 +4,8 @@
     --main-background-color: #ffffff;
     --secondary-background-color: #f4f4fd;
     --hover-color: #404BBF;
+    --footer-text-color: #E7E9FC;
+    --first-part-logo-color: #4D5AE5;
 }
 body {
     font-family: 'Roboto', sans-serif;
@@ -30,8 +32,6 @@ ul {
     font-weight: 800;
     font-size: 18px;
     line-height: 1.33;
-    display: flex;
-    align-items: center;
     letter-spacing: 0.03em;
     text-transform: uppercase;
     text-decoration: none;
@@ -39,7 +39,7 @@ ul {
 }
 
 .logo span {
-    color: #4D5AE5;
+    color: var(--first-part-logo-color);
 }
 
 .nav-title {
@@ -56,10 +56,14 @@ ul {
 .nav-title:active,
 .contacts:hover,
 .contacts:focus,
-.contacts:active {
+.contacts:active,
+.current {
     color: var(--hover-color);
 }
 
+.address {
+    font-style: normal;
+}
 /* Hero section  */
 .hero,
 footer {
@@ -71,6 +75,7 @@ footer {
     line-height: 1.07;
     text-align: center;
     letter-spacing: 0.02em;
+    text-transform: capitalize;
     color: var(--main-background-color);
 }
 
@@ -95,8 +100,15 @@ footer {
 }
 
 /* Benefits section  */
-
-.benefits-title {
+.hidden-title {
+    font-size: 0;
+    border: 0;
+    width: 0;
+    height: 0;
+}
+.benefits-title,
+.team-member-title,
+.example-title {
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
@@ -112,7 +124,6 @@ footer {
     line-height: 1.11;
     text-align: center;
     text-transform: capitalize;
-    text-align: center;
     color: var(--main-title-color);
 }
 
@@ -122,23 +133,15 @@ footer {
     background-color: var(--secondary-background-color);
 }
 
-.team-member-title {
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 1.2;
-    /* text-align: center; */
-    color: var(--main-title-color);
-}
-
 /* Footer  */
 .footer-logo {
-    line-height: 21px;
+    line-height: 1.17;
     color: var(--secondary-background-color);
 }
 
 .footer-text {
     font-size: 16px;
-    color: #E7E9FC;
+    color: var(--footer-text-color);
 }
 
 /* PORTFOLIO PAGE  */
@@ -147,9 +150,8 @@ footer {
     font-weight: 500;
     text-align: center;
     letter-spacing: 0.04em;
-    color: #4D5AE5;
-    background-color: #fff;
-    background: var(--secondary-background-color);
+    color: var(--first-part-logo-color);
+    background-color: var(--secondary-background-color);
     border: 1px solid #E7E9FC;
     border-radius: 4px;
     cursor: pointer;
@@ -161,7 +163,4 @@ footer {
     background-color: var(--hover-color);
 }
 
-.example-title {
-
-}
 
